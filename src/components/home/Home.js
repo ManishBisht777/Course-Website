@@ -1,10 +1,15 @@
 import React from "react";
 import { useState, useEffect } from "react";
+
+// css import
 import "./home.css";
 
+// mui components
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
+
+// images and icons import
 
 import img1 from "../../images/img1.jpg";
 import img2 from "../../images/img2.jpg";
@@ -15,10 +20,14 @@ import { MdPlayLesson } from "react-icons/md";
 import { AiFillEye } from "react-icons/ai";
 import { FaBaseballBall } from "react-icons/fa";
 
+// carousel import
+
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Home = () => {
+  // function for dynamic counter
+
   const [countdownDate, setCountdownDate] = useState(
     new Date("07/01/2022").getTime()
   );
