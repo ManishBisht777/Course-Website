@@ -1,0 +1,56 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.button {
+  padding: 5px 15px;
+  border-radius: 20px;
+  background: none;
+  margin: 0 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  color: #fff;
+}
+
+.button:hover {
+  border: 1px solid white;
+}
+
+.button_active {
+  border: 1px solid white;
+}
+
+.links ul {
+  display: flex;
+}
+
+.links ul li {
+  margin: 0 10px;
+}
+
+.links ul li a {
+  color: #fff;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 20px;
+}
+
+.logo p {
+  text-transform: uppercase;
+  margin: 0 20px;
+  font-size: 0.9rem;
+}
