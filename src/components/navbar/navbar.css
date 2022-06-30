@@ -15,7 +15,7 @@
   padding: 5px 15px;
   border-radius: 20px;
   background: none;
-  margin: 0 10px;
+  margin: 10px;
   border: 1px solid transparent;
   cursor: pointer;
   color: #fff;
@@ -53,4 +53,68 @@
   text-transform: uppercase;
   margin: 0 20px;
   font-size: 0.9rem;
+}
+
+.hamburger {
+  display: none;
+  margin: 20px;
+  font-size: 30px;
+}
+
+.toggle ul {
+  /* display: none; */
+  position: absolute;
+  bottom: -200px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.753);
+  border: 1px solid rgba(77, 77, 77, 0.815);
+  border-radius: 10px;
+  align-items: center;
+  padding: 10px;
+}
+
+.toggle ul li {
+  margin: 5px;
+}
+
+.toggle ul a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.close ul {
+  display: none;
+}
+
+.open ul {
+  display: flex;
+}
+
+.logoopen {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.logoopen svg {
+  margin: 0 10px;
+}
+
+/* responsiveness */
+
+@media (max-width: 700px) {
+  .logo,
+  .links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+  .open ul {
+    display: flex;
+  }
 }
