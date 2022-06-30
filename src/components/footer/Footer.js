@@ -50,28 +50,37 @@ const Footer = () => {
       <div className="foot3">
         <ul>
           <li>
-            <a href="/">Home</a>
+            <a href="/">About Us</a>
+          </li>
+          <li>
+            <a href="/">Jobs</a>
           </li>
           <li>
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="/">Home</a>
+            <a href="/">Blog</a>
           </li>
           <li>
-            <a href="/">Home</a>
+            <a href="/">Press</a>
           </li>
           <li>
-            <a href="/">Home</a>
+            <a href="/">FAQs</a>
           </li>
           <li>
-            <a href="/">Home</a>
+            <a href="/">Career</a>
           </li>
           <li>
-            <a href="/">Home</a>
+            <a href="/">Contact</a>
           </li>
           <li>
-            <a href="/">Home</a>
+            <a href="/">Privacy</a>
+          </li>
+          <li>
+            <a href="/">Site Map</a>
+          </li>
+          <li>
+            <a href="/">Terms Of Use</a>
           </li>
         </ul>
         <div className="foot4">
@@ -92,7 +101,7 @@ const Footer = () => {
               <BsBookmarkHeartFill />
             </div>
           </div>
-          <div className="foot6">coput</div>
+          <div className="foot6">All Rights Reserved</div>
         </div>
       </div>
     </div>
