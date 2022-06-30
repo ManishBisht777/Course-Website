@@ -1,7 +1,9 @@
 import React from "react";
 import "./footer.css";
 import { BsBookmarkHeartFill } from "react-icons/bs";
-
+import { MdPlayLesson } from "react-icons/md";
+import { AiFillEye } from "react-icons/ai";
+import { FaBaseballBall } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className="footer">
@@ -24,7 +26,7 @@ const Footer = () => {
             </div>
             <div className="link">
               <div className="icon">
-                <BsBookmarkHeartFill />
+                <FaBaseballBall />
               </div>
               <div className="sub">
                 <p>Have any questions ?</p>
@@ -89,16 +91,16 @@ const Footer = () => {
               <BsBookmarkHeartFill />
             </div>
             <div className="icon">
-              <BsBookmarkHeartFill />
+              <MdPlayLesson />
             </div>
             <div className="icon">
               <BsBookmarkHeartFill />
             </div>
             <div className="icon">
-              <BsBookmarkHeartFill />
+              <AiFillEye />
             </div>
             <div className="icon">
-              <BsBookmarkHeartFill />
+              <FaBaseballBall />
             </div>
           </div>
           <div className="foot6">All Rights Reserved</div>

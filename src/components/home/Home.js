@@ -3,16 +3,20 @@ import { useState, useEffect } from "react";
 import "./home.css";
 
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
 
 import img1 from "../../images/img1.jpg";
 import img2 from "../../images/img2.jpg";
 import img3 from "../../images/img3.jpg";
 import img4 from "../../images/img4.jpg";
 import { BsStarFill, BsStarHalf, BsBookmarkHeartFill } from "react-icons/bs";
+import { MdPlayLesson } from "react-icons/md";
+import { AiFillEye } from "react-icons/ai";
+import { FaBaseballBall } from "react-icons/fa";
+
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Home = () => {
   const [countdownDate, setCountdownDate] = useState(
@@ -142,7 +146,7 @@ const Home = () => {
               component="img"
               alt="green iguana"
               height="140"
-              image={img1}
+              image={img2}
             />
             <CardContent>
               <h5 className="big-text">
@@ -168,7 +172,7 @@ const Home = () => {
               component="img"
               alt="green iguana"
               height="140"
-              image={img1}
+              image={img3}
             />
             <CardContent>
               <h5 className="big-text">
@@ -194,7 +198,7 @@ const Home = () => {
               component="img"
               alt="green iguana"
               height="140"
-              image={img1}
+              image={img4}
             />
             <CardContent>
               <h5 className="big-text">
@@ -263,27 +267,27 @@ const Home = () => {
               </div>
             </div>
             <div className="circle">
-              <p>Live Course</p>
+              <p>1000+ lessons</p>
               <div className="bxcircle">
-                <BsBookmarkHeartFill />
+                <MdPlayLesson />
               </div>
             </div>
             <div className="circle">
-              <p>Live Course</p>
+              <p>Live Classes</p>
               <div className="bxcircle">
-                <BsBookmarkHeartFill />
+                <FaBaseballBall />
               </div>
             </div>
           </div>
           <div className="circle2">
             <div className="circle">
-              <p>Live Course</p>
+              <p>10000+ views</p>
               <div className="bxcircle">
-                <BsBookmarkHeartFill />
+                <AiFillEye />
               </div>
             </div>
             <div className="circle">
-              <p>Live Course</p>
+              <p>live exam</p>
               <div className="bxcircle">
                 <BsBookmarkHeartFill />
               </div>
@@ -299,17 +303,56 @@ const Home = () => {
           TESTIMONIALS <span></span>
         </div>
         <div className="testimonial">
-          <div className="t-card">
-            <img src={img2} alt="" />
-            <p>
-              " Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Repellat modi et consequuntur sint esse atque adipisci totam
-              dolorum repellendus at vel ex obcaecati error deleniti,
-              dignissimos, quae a perferendis nulla saepe! Aperiam, quam iste."
-            </p>
-            <div className="name">Manish Bisht</div>
-            <p className="role">Full Stack Developer</p>
-          </div>
+          <Carousel showArrows={true}>
+            <div className="t-card">
+              <img src={img2} alt="" />
+              <p>
+                " Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Repellat modi et consequuntur sint esse atque adipisci totam
+                dolorum repellendus at vel ex obcaecati error deleniti,
+                dignissimos, quae a perferendis nulla saepe! Aperiam, quam
+                iste."
+              </p>
+              <div className="name">Manish Bisht</div>
+              <p className="role">Full Stack Developer</p>
+            </div>
+            <div className="t-card">
+              <img src={img1} alt="" />
+              <p>
+                " Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Repellat modi et consequuntur sint esse atque adipisci totam
+                dolorum repellendus at vel ex obcaecati error deleniti,
+                dignissimos, quae a perferendis nulla saepe! Aperiam, quam
+                iste."
+              </p>
+              <div className="name">Manish Bisht</div>
+              <p className="role">Full Stack Developer</p>
+            </div>
+            <div className="t-card">
+              <img src={img3} alt="" />
+              <p>
+                " Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Repellat modi et consequuntur sint esse atque adipisci totam
+                dolorum repellendus at vel ex obcaecati error deleniti,
+                dignissimos, quae a perferendis nulla saepe! Aperiam, quam
+                iste."
+              </p>
+              <div className="name">Manish Bisht</div>
+              <p className="role">Full Stack Developer</p>
+            </div>
+            <div className="t-card">
+              <img src={img4} alt="" />
+              <p>
+                " Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Repellat modi et consequuntur sint esse atque adipisci totam
+                dolorum repellendus at vel ex obcaecati error deleniti,
+                dignissimos, quae a perferendis nulla saepe! Aperiam, quam
+                iste."
+              </p>
+              <div className="name">Manish Bisht</div>
+              <p className="role">Full Stack Developer</p>
+            </div>
+          </Carousel>
         </div>
       </div>
 
