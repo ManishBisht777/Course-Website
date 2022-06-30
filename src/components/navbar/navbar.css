@@ -85,6 +85,14 @@
   font-size: 0.9rem;
 }
 
+.close {
+  display: none;
+}
+
+.open {
+  display: flex;
+}
+
 .close ul {
   display: none;
 }
@@ -115,6 +123,9 @@
     display: flex;
   }
   .open ul {
+    display: flex;
+  }
+  .close {
     display: flex;
   }
 }

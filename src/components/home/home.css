@@ -16,7 +16,8 @@
 }
 
 .box1 {
-  width: 500px;
+  max-width: 500px;
+  margin: 20px;
 }
 
 .small-text {
@@ -35,7 +36,7 @@
 
 .home .title {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.7rem;
   line-height: 17px;
   letter-spacing: 0.018em;
   color: #9921e8;
@@ -96,12 +97,12 @@
 
 .time {
   margin: 0;
-  font-size: 60px !important;
+  font-size: 3rem !important;
   font-weight: 800 !important;
 }
 
 .small {
-  font-size: 18px !important;
+  font-size: 1rem !important;
 }
 
 .time-text {
@@ -166,6 +167,7 @@
   color: #5f72be;
   margin-bottom: 10px;
   border: 2px solid #5f72be;
+  margin-top: 0;
 }
 
 .courses-card button:hover {
@@ -183,6 +185,7 @@
   display: flex;
   position: relative;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .learnnow .learnbx {
@@ -244,8 +247,8 @@
 }
 
 .bxcircle {
-  width: 120px;
-  height: 120px;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
   background: #5f72be;
   margin: 5px;
@@ -281,7 +284,7 @@
 }
 
 .testimonials .big-text span {
-  min-width: 300px;
+  width: 300px;
   display: inline-block;
   height: 3px;
   background-color: #5f72be;
@@ -295,6 +298,7 @@
   align-items: center;
   max-width: 700px;
   color: rgb(44, 44, 44);
+  margin: 10px;
 }
 
 .t-card img {
@@ -306,7 +310,7 @@
 
 .t-card p {
   text-align: center;
-  font-size: 14px;
+  font-size: 0.8rem;
 }
 
 .t-card .role,
@@ -338,4 +342,32 @@
   margin: 20px;
   border-radius: 10px;
   padding: 10px 70px;
+}
+
+/* responsiveness */
+
+/* home section */
+
+@media (max-width: 600px) {
+  .home {
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  .circles {
+    flex-direction: column;
+  }
+  .circle {
+    margin: 10px;
+  }
+  .testimonials .big-text {
+    margin: 1rem;
+  }
+  .testimonials .big-text span {
+    width: 100px;
+  }
+
+  .contact {
+    flex-direction: column;
+  }
 }
