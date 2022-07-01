@@ -422,6 +422,41 @@
   padding: 10px 70px;
 }
 
+/* slick slider css */
+
+.slick-initialized slick-slider {
+  margin-bottom: 0;
+}
+
+.slick-slider {
+  overflow-x: hidden;
+}
+
+.slider-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.slick-slide slick-active {
+  width: 20px;
+}
+.slick-arrow {
+  display: none !important;
+}
+.slick-track {
+  display: flex;
+  overflow-x: hidden;
+}
+
+.slick-dots {
+  display: none !important;
+}
+
+.slick-active {
+  display: flex;
+  justify-content: center;
+}
+
 /* responsiveness */
 
 /* home section */
@@ -465,5 +500,10 @@
 
   .testimonials {
     overflow-x: hidden;
+    margin: 100px 0;
+  }
+  .slick-next,
+  .slick-prev {
+    display: none !important;
   }
 }

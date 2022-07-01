@@ -24,12 +24,13 @@ import { FaBaseballBall } from "react-icons/fa";
 
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Slider from "react-slick";
 
 const Home = () => {
   // function for dynamic counter
 
   const [countdownDate, setCountdownDate] = useState(
-    new Date("07/01/2022").getTime()
+    new Date("08/01/2022").getTime()
   );
   const [state, setState] = useState({
     days: 0,
@@ -41,6 +42,45 @@ const Home = () => {
   useEffect(() => {
     setInterval(() => setNewTime(), 1000);
   }, []);
+
+  // settings for carousel
+
+  var settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 0,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
   const setNewTime = () => {
     if (countdownDate) {
@@ -124,136 +164,138 @@ const Home = () => {
         </div>
 
         <div className="courses-card">
-          <Card className="card" sx={{ maxWidth: 245 }}>
-            <CardMedia
-              component="img"
-              alt="green iguana"
-              height="140"
-              image={img1}
-            />
-            <CardContent>
-              <h5 className="big-text">
-                Learn SCRUM: The Complete Beginner Course
-                {/* <BsBookmarkHeartFill /> */}
-              </h5>
-              <p className="small-text">Samay Jain, Ex-KPMG</p>
-              <div className="ratings">
-                <p>4.5</p>
-                <div className="rating">
-                  <BsStarFill />
-                  <BsStarFill />
-                  <BsStarFill />
-                  <BsStarFill />
-                  <BsStarHalf />
+          <Slider {...settings}>
+            <Card className="card" sx={{ maxWidth: 245 }}>
+              <CardMedia
+                component="img"
+                alt="green iguana"
+                height="140"
+                image={img1}
+              />
+              <CardContent>
+                <h5 className="big-text">
+                  Learn SCRUM: The Complete Beginner Course
+                  {/* <BsBookmarkHeartFill /> */}
+                </h5>
+                <p className="small-text">Samay Jain, Ex-KPMG</p>
+                <div className="ratings">
+                  <p>4.5</p>
+                  <div className="rating">
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarHalf />
+                  </div>
                 </div>
-              </div>
-            </CardContent>
-            <button className="button button_active">Enroll Now</button>
-          </Card>
-          <Card className="card" sx={{ maxWidth: 245 }}>
-            <CardMedia
-              component="img"
-              alt="green iguana"
-              height="140"
-              image={img2}
-            />
-            <CardContent>
-              <h5 className="big-text">
-                Learn SCRUM: The Complete Beginner Course
-                {/* <BsBookmarkHeartFill /> */}
-              </h5>
-              <p className="small-text">Samay Jain, Ex-KPMG</p>
-              <div className="ratings">
-                <p>4.5</p>
-                <div className="rating">
-                  <BsStarFill />
-                  <BsStarFill />
-                  <BsStarFill />
-                  <BsStarFill />
-                  <BsStarHalf />
+              </CardContent>
+              <button className="button button_active">Enroll Now</button>
+            </Card>
+            <Card className="card" sx={{ maxWidth: 245 }}>
+              <CardMedia
+                component="img"
+                alt="green iguana"
+                height="140"
+                image={img2}
+              />
+              <CardContent>
+                <h5 className="big-text">
+                  Learn SCRUM: The Complete Beginner Course
+                  {/* <BsBookmarkHeartFill /> */}
+                </h5>
+                <p className="small-text">Samay Jain, Ex-KPMG</p>
+                <div className="ratings">
+                  <p>4.5</p>
+                  <div className="rating">
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarHalf />
+                  </div>
                 </div>
-              </div>
-            </CardContent>
-            <button className="button button_active">Enroll Now</button>
-          </Card>
-          <Card className="card" sx={{ maxWidth: 245 }}>
-            <CardMedia
-              component="img"
-              alt="green iguana"
-              height="140"
-              image={img3}
-            />
-            <CardContent>
-              <h5 className="big-text">
-                Learn SCRUM: The Complete Beginner Course
-                {/* <BsBookmarkHeartFill /> */}
-              </h5>
-              <p className="small-text">Samay Jain, Ex-KPMG</p>
-              <div className="ratings">
-                <p>4.5</p>
-                <div className="rating">
-                  <BsStarFill />
-                  <BsStarFill />
-                  <BsStarFill />
-                  <BsStarFill />
-                  <BsStarHalf />
+              </CardContent>
+              <button className="button button_active">Enroll Now</button>
+            </Card>
+            <Card className="card" sx={{ maxWidth: 245 }}>
+              <CardMedia
+                component="img"
+                alt="green iguana"
+                height="140"
+                image={img3}
+              />
+              <CardContent>
+                <h5 className="big-text">
+                  Learn SCRUM: The Complete Beginner Course
+                  {/* <BsBookmarkHeartFill /> */}
+                </h5>
+                <p className="small-text">Samay Jain, Ex-KPMG</p>
+                <div className="ratings">
+                  <p>4.5</p>
+                  <div className="rating">
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarHalf />
+                  </div>
                 </div>
-              </div>
-            </CardContent>
-            <button className="button button_active">Enroll Now</button>
-          </Card>
-          <Card className="card" sx={{ maxWidth: 245 }}>
-            <CardMedia
-              component="img"
-              alt="green iguana"
-              height="140"
-              image={img4}
-            />
-            <CardContent>
-              <h5 className="big-text">
-                Learn SCRUM: The Complete Beginner Course
-                {/* <BsBookmarkHeartFill /> */}
-              </h5>
-              <p className="small-text">Samay Jain, Ex-KPMG</p>
-              <div className="ratings">
-                <p>4.5</p>
-                <div className="rating">
-                  <BsStarFill />
-                  <BsStarFill />
-                  <BsStarFill />
-                  <BsStarFill />
-                  <BsStarHalf />
+              </CardContent>
+              <button className="button button_active">Enroll Now</button>
+            </Card>
+            <Card className="card" sx={{ maxWidth: 245 }}>
+              <CardMedia
+                component="img"
+                alt="green iguana"
+                height="140"
+                image={img4}
+              />
+              <CardContent>
+                <h5 className="big-text">
+                  Learn SCRUM: The Complete Beginner Course
+                  {/* <BsBookmarkHeartFill /> */}
+                </h5>
+                <p className="small-text">Samay Jain, Ex-KPMG</p>
+                <div className="ratings">
+                  <p>4.5</p>
+                  <div className="rating">
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarHalf />
+                  </div>
                 </div>
-              </div>
-            </CardContent>
-            <button className="button button_active">Enroll Now</button>
-          </Card>
-          <Card className="card" sx={{ maxWidth: 245 }}>
-            <CardMedia
-              component="img"
-              alt="green iguana"
-              height="140"
-              image={img1}
-            />
-            <CardContent>
-              <h5 className="big-text">
-                Learn SCRUM: The Complete Beginner Course
-                {/* <BsBookmarkHeartFill /> */}
-              </h5>
-              <p className="small-text">Samay Jain, Ex-KPMG</p>
-              <div className="ratings">
-                <p>4.5</p>
-                <div className="rating">
-                  <BsStarFill />
-                  <BsStarFill />
-                  <BsStarFill />
-                  <BsStarFill />
-                  <BsStarHalf />
+              </CardContent>
+              <button className="button button_active">Enroll Now</button>
+            </Card>
+            <Card className="card" sx={{ maxWidth: 245 }}>
+              <CardMedia
+                component="img"
+                alt="green iguana"
+                height="140"
+                image={img1}
+              />
+              <CardContent>
+                <h5 className="big-text">
+                  Learn SCRUM: The Complete Beginner Course
+                  {/* <BsBookmarkHeartFill /> */}
+                </h5>
+                <p className="small-text">Samay Jain, Ex-KPMG</p>
+                <div className="ratings">
+                  <p>4.5</p>
+                  <div className="rating">
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarFill />
+                    <BsStarHalf />
+                  </div>
                 </div>
-              </div>
-            </CardContent>
-            <button className="button button_active">Enroll Now</button>
-          </Card>
+              </CardContent>
+              <button className="button button_active">Enroll Now</button>
+            </Card>
+          </Slider>
         </div>
       </div>
 
